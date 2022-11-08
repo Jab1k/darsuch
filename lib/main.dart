@@ -14,30 +14,39 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Container(
-            color: Colors.white,
+            color: Colors.blue,
             child: Stack(children: [
-              Align(
-                alignment: Alignment.center,
+              // Align(
+              //   alignment: Alignment.center,
+              //   child: Container(
+              //     height: 250,
+              //     width: 250,
+              //     color: Colors.red,
+              //   ),
+              // ),
+              // Align(
+              //     alignment: Alignment.center,
+              //     child: Container(
+              //       height: 200,
+              //       width: 200,
+              //       color: Colors.blue,
+              //     )),
+              Positioned(
+                right: 120,
+                top: 10,
                 child: Container(
-                  height: 250,
-                  width: 250,
-                  color: Colors.red,
+                  height: 1500,
+                  width: 100,
+                  color: Colors.yellow,
                 ),
               ),
-              Align(
-                  alignment: Alignment.center,
-                  child: Container(
-                    height: 200,
-                    width: 200,
-                    color: Colors.blue,
-                  )),
               Positioned(
-                right: 50,
-                top: 100,
+                bottom: 500,
+                right: 0,
                 child: Container(
-                  height: 50,
-                  width: 50,
-                  color: Colors.black,
+                  height: 100,
+                  width: 700,
+                  color: Colors.yellow,
                 ),
               )
             ])));
