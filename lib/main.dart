@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,47 +7,64 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
         home: Container(
-            color: Colors.blue,
-            child: Stack(children: [
-              // Align(
-              //   alignment: Alignment.center,
-              //   child: Container(
-              //     height: 250,
-              //     width: 250,
-              //     color: Colors.red,
-              //   ),
-              // ),
-              // Align(
-              //     alignment: Alignment.center,
-              //     child: Container(
-              //       height: 200,
-              //       width: 200,
-              //       color: Colors.blue,
-              //     )),
-              Positioned(
-                right: 120,
-                top: 10,
-                child: Container(
-                  height: 1500,
-                  width: 100,
-                  color: Colors.yellow,
-                ),
+      color: Colors.green,
+      child: Center(
+        child: Stack(
+          children: [
+            Positioned(
+              left: 300,
+              child: Container(
+                height: 4000,
+                width: 200,
+                color: Colors.yellow,
               ),
-              Positioned(
-                bottom: 500,
-                right: 0,
-                child: Container(
-                  height: 100,
-                  width: 700,
-                  color: Colors.yellow,
-                ),
-              )
-            ])));
+            ),
+            Positioned(
+              top: 850,
+              right: 0,
+              child: Container(
+                height: 500,
+                width: 1000,
+                color: Colors.yellow,
+              ),
+            ),
+            Positioned(
+              left: 20,
+              top: 200,
+              right: 150,
+              child: Container(
+                height: 500,
+                width: 200,
+                color: Colors.yellow,
+              ),
+            ),
+            Positioned(
+              left: 80,
+              top: 230,
+              right: 200,
+              child: Container(
+                height: 320,
+                width: 0,
+                color: Colors.blue,
+              ),
+            ),
+            Positioned(
+              left: 120,
+              top: 240,
+              right: 240,
+              child: Container(
+                height: 200,
+                width: 3,
+                color: Colors.green,
+              ),
+            )
+          ],
+        ),
+      ),
+    ));
   }
 }
