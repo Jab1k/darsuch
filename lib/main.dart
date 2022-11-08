@@ -12,48 +12,34 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false ,
-      home: Container(
-        color: Colors.white,
-        child: Row(
-          children: [
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              Container(
-                height: 450,
-                width: 152,
-                color: Colors.blue,
+        debugShowCheckedModeBanner: false,
+        home: Container(
+            color: Colors.white,
+            child: Stack(children: [
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  height: 250,
+                  width: 250,
+                  color: Colors.red,
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 120,
-                    width: 100,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    height: 120,
-                    width: 100,
-                    color: Colors.red,
-                  )
-                ],
+              Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    height: 200,
+                    width: 200,
+                    color: Colors.blue,
+                  )),
+              Positioned(
+                right: 50,
+                top: 100,
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  color: Colors.black,
+                ),
               )
-            ]),
-            Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-              Container(
-                height: 120,
-                width: 100,
-                color: Colors.yellow,
-              ),
-              Container(
-                height: 120,
-                width: 100,
-                color: Colors.red,
-              )
-            ])
-          ],
-        ),
-      ),
-    );
+            ])));
   }
 }
